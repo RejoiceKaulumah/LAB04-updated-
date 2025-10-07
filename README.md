@@ -47,14 +47,6 @@ A **fun and interactive web app** to create beautiful student profile cards with
 
 ---
 
-## 📸 Screenshots
-
-**Light Mode (Baby Pink):**
-![Light Mode](screenshots/light_mode.png)
-
-**Dark Mode (Dusty Pink):**
-![Dark Mode](screenshots/dark_mode.png)
-
 ---
 
 ## ⚡ Future Improvements
@@ -68,4 +60,3 @@ A **fun and interactive web app** to create beautiful student profile cards with
 
 # Student: REJOICE KAULUMAH 
   *** student number: 224061135
-  
