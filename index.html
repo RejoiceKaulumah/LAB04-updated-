@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Profile Card Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button id="themeToggle" title="Toggle light/dark mode">🌞 / 🌙</button>
+  </header>
+
+  <main class="app">
+    <section class="panel" aria-labelledby="makerTitle">
+      <h1 id="makerTitle">Student Profile Card Maker</h1>
+      <p class="lead">Create beautiful student profile cards — upload a photo, add details, pick a theme and export as PNG.</p>
+
+      <form id="cardForm" autocomplete="off">
+        <div>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="e.g. Rejoice Kaulumah" required />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" placeholder="e.g. example@email.com" required />
+        </div>
+
+        <div style="display:flex; gap:8px;">
+          <div style="flex:1">
+            <label for="major">Major / Program</label>
+            <input id="major" name="major" type="text" placeholder="e.g. Computer Science" />
+          </div>
+          <div>
+            <label for="year">Year</label>
+            <select id="year" name="year">
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="bio">Short bio</label>
+          <textarea id="bio" name="bio" placeholder="Enthusiastic dev, coffee lover, and UI designer."></textarea>
+        </div>
+
+        <div>
+          <label for="hobbies">Hobbies (comma-separated)</label>
+          <input id="hobbies" name="hobbies" type="text" placeholder="e.g. coding, gaming, reading" />
+        </div>
+
+        <div>
+          <label for="photo">Photo</label>
+          <input id="photo" name="photo" type="file" accept="image/*" />
+        </div>
+
+        <div>
+          <label for="theme">Theme</label>
+          <select id="theme" name="theme">
+            <option value="teal">Teal Gradient</option>
+            <option value="violet">Violet Glow</option>
+            <option value="sun">Sunrise</option>
+            <option value="mono">Monochrome</option>
+          </select>
+        </div>
+
+        <div class="card-preview" aria-hidden="true">
+          <div class="avatar-preview" id="avatarPreview">+</div>
+          <div>
+            <div id="previewName">Full name</div>
+            <div id="previewMeta">Major • Year</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button type="submit" class="btn-primary">Create card</button>
+          <button type="button" id="clearBtn" class="btn-ghost">Clear inputs</button>
+        </div>
+      </form>
+
+      <hr />
+
+      <div style="display:flex; justify-content:space-between;">
+        <div>Your cards</div>
+        <div>
+          <button id="removeAll" class="btn-ghost">Remove all</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div id="cardsWrap">
+        <div class="empty">No cards yet — fill the form and click "Create card" to add one.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
